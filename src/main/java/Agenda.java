@@ -98,11 +98,21 @@ public class Agenda {
         }
 
     }
-    /*
-    agregarGrupo(String nombreGrupo){
 
+    public void agregarGrupo(String nombreGrupo){
+        if(nombreGrupo == null || nombreGrupo.isBlank()){
+            System.out.println("El grupo no puede ser un string vacio o nulo!");
+            return;
+        }
+        String inputFormatted = nombreGrupo.trim().toLowerCase(Locale.ROOT);
+
+        if(!gruposAgenda.add(inputFormatted)){
+            System.out.printf("La categoría %s no se agregó exitosamente.%n",inputFormatted);
+        } else{
+            System.out.printf("La categoría %s se agregó exitosamente.%n",inputFormatted);
+        }
     }
-
+    /*
     agregarContactoAGrupo(String nombreContacto, String nombreGrupo){
 
     }
