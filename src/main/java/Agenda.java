@@ -67,21 +67,38 @@ public class Agenda {
         return true;
     }
 
-    /*
-C. ¿Qué pasa con los grupos?
-Esta es la parte más interesante del ejercicio.
-    *
-    * */
+    public void listarContactos(){
+        if(listaRegistroContactos.isEmpty()){
+            System.out.println("No hay contactos que listar!");
+            return;
+        }
 
-    /*
-    listarContactos(){
+        System.out.println("-----------------------------------------------------");
+        System.out.println("             LISTA DE CONTACTOS");
+        System.out.println("-----------------------------------------------------");
 
+        for (Map.Entry<String, Contacto> entrada : listaRegistroContactos.entrySet()) {
+            System.out.println(entrada.getKey());
+            System.out.println(entrada.getValue());
+        }
     }
 
-    listarHistorial(){
+
+    public void listarHistorial(){
+        if (historialInsercion.isEmpty()){
+            System.out.println("No se han agregado contactos a la agenda!");
+            return;
+        }
+
+        System.out.println("-----------------------------------------------------");
+        System.out.println("             HISTORIAL DE CONTACTOS");
+        System.out.println("-----------------------------------------------------");
+        for(Contacto contacto:historialInsercion){
+            System.out.println(contacto);
+        }
 
     }
-
+    /*
     agregarGrupo(String nombreGrupo){
 
     }
