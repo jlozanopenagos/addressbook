@@ -2,10 +2,10 @@ import java.util.Objects;
 
 public class Contacto {
     private String name;
-    private int phoneNumber;
+    private String phoneNumber;
     private String email;
 
-    public Contacto(String name, int phoneNumber, String email) {
+    public Contacto(String name, String phoneNumber, String email) {
         this.name = name;
         this.phoneNumber = phoneNumber;
         this.email = email;
@@ -15,7 +15,7 @@ public class Contacto {
         return name;
     }
 
-    public int getPhoneNumber() {
+    public String getPhoneNumber() {
         return phoneNumber;
     }
 
@@ -27,7 +27,7 @@ public class Contacto {
         this.name = name;
     }
 
-    public void setPhoneNumber(int phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

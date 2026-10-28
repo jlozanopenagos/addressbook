@@ -32,6 +32,10 @@ public class Agenda {
 
         listaRegistroContactos.put(nombre, c);
         historialInsercion.add(c); // tambien se agrega al historial de contactos
+
+        System.out.println("-----------------------------------------------------");
+        System.out.printf("     El CONTACTO %s SE AGREGO SATISFACTORIAMENTE%n", nombre);
+        System.out.println("-----------------------------------------------------");
     }
 
     public Contacto buscarContacto(String nombre) {
